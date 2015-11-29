@@ -6,8 +6,12 @@
 
 package praticas5a;
 
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -20,12 +24,24 @@ public class Praticas5a {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        JFrame janela = new JFrame("JFrame Window");
+        JFrame window = new JFrame("JFrame Window");
         JLabel txt = new JLabel("JLabel Plain Text");
-        janela.add(txt);
-        janela.setSize(800,500);
-        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        janela.setVisible(true);
+        JButton click = new JButton();
+        JTextField field = new JTextField(15);
+        JComboBox options = new JComboBox();
+        options.addItem("John");
+        options.addItem("Mary");
+        click.setText("JButton");
+        
+        window.setLayout(new FlowLayout());
+        window.add(txt);
+        window.add(click);
+        window.add(field);
+        window.add(options);
+        
+        window.setSize(800,500);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setVisible(true);
     }
     
 }
